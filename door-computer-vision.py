@@ -1,8 +1,8 @@
 from os import getcwd, listdir
 from os.path import isfile, join, splitext
-from wget import download
 
 from imageai.Detection import ObjectDetection
+from wget import download
 
 project_path = getcwd()
 source_path = join(project_path, "source")
@@ -13,6 +13,8 @@ images_files = [f for f in listdir(source_path) if isfile(join(source_path, f)) 
 if not isfile(dataset_path):
     def bar_custom(current, total, width=80):
         print("Downloading: %d%% [%d / %d] bytes" % (current / total * 100, current, total))
+
+
     download(
         "https://github.com/OlafenwaMoses/ImageAI/releases/download/1.0/resnet50_coco_best_v2.0.1.h5",
         dataset_path,
