@@ -1,0 +1,5 @@
+tensorflow==1.14.0
+opencv-python==4.2.0.32
+Keras==2.3.1
+imageai==2.1.5
+wget==3.2
